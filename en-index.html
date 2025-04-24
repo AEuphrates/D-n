@@ -35,6 +35,7 @@
             .slider {
                 display: flex;
                 height: 100%;
+                width: 100%;
                 transition: transform 0.5s ease-in-out;
             }
             
@@ -44,6 +45,7 @@
                 background-size: cover;
                 background-position: center;
                 position: relative;
+                flex-shrink: 0; /* Prevents slides from compressing */
             }
             
             .slide-1 {
@@ -193,8 +195,8 @@
                 font-family: 'Playfair Display', serif;
                 text-align: center;
                 font-size: 2rem;
-                margin-top: 10px;    /* Üst boşluğu */
-        margin-bottom: 50px;
+                margin-top: 10px;
+                margin-bottom: 50px;
                 color: #d87093;
             }
             
@@ -318,30 +320,29 @@
                 margin-top: 10px;
                 font-size: 1.1rem;
             }
+            
             .language-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 8px 12px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    
-    .language-switcher a {
-    color: #555;
-    text-decoration: none;
-    margin: 0 6px;
-    font-weight: 600;
-    transition: color 0.3s;
-    }
-    
-    .language-switcher a:hover {
-    color: #d87093;
-    }
-    
-    
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+                background-color: rgba(255, 255, 255, 0.85);
+                padding: 8px 12px;
+                border-radius: 6px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+            
+            .language-switcher a {
+                color: #555;
+                text-decoration: none;
+                margin: 0 6px;
+                font-weight: 600;
+                transition: color 0.3s;
+            }
+            
+            .language-switcher a:hover {
+                color: #d87093;
+            }
             
             @media (max-width: 768px) {
                 .event-container {
@@ -351,22 +352,22 @@
                 .event-box {
                     width: 100%;
                 }
+                
                 .nav {
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .nav-link {
-        width: 70%;
-        text-align: center;
-    }
-    
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
+                
+                .nav-link {
+                    width: 70%;
+                    text-align: center;
+                }
             }
             
             /* RSVP Section */
@@ -441,6 +442,13 @@
                 border-color: #d87093;
                 box-shadow: 0 0 5px rgba(216, 112, 147, 0.3);
                 background-color: #fff;
+            }
+            
+            .form-group input:disabled {
+                background-color: #f0f0f0;
+                cursor: not-allowed;
+                color: #888;
+                border-color: #ddd;
             }
             
             .form-group textarea {
@@ -557,21 +565,22 @@
             .footer-link:hover {
                 color: #d87093;
             }
+            
             .map-link {
                 color: #d87093;
                 text-decoration: underline;
                 transition: color 0.3s ease;
-    font-weight: 500;
-    line-height: 1.6;
-    text-align: center;
-    font-size: 15px;
-    }
-    
-    .map-link:hover {
-    color: #1a0dab;
-    text-decoration: underline;
-    }
-    
+                font-weight: 500;
+                line-height: 1.6;
+                text-align: center;
+                font-size: 15px;
+            }
+            
+            .map-link:hover {
+                color: #1a0dab;
+                text-decoration: underline;
+            }
+            
             /* Media Queries */
             @media (max-width: 768px) {
                 .slide-title {
@@ -606,170 +615,172 @@
                     margin-bottom: 20px;
                 }
             }
+            
             .music-player-container {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 1000;
-    }
-    
-    .music-player {
-        display: flex;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 10px 15px;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        border: 1px solid rgba(216, 112, 147, 0.2);
-    }
-    
-    .music-player:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-    
-    .music-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f9f2f4;
-        color: #d87093;
-        font-size: 18px;
-        transition: all 0.3s;
-        position: relative;
-        margin-right: 12px;
-    }
-    
-    .music-toggle:hover {
-        background-color: #d87093;
-        color: #fff;
-        transform: scale(1.05);
-    }
-    
-    .music-toggle .play {
-        display: block;
-    }
-    
-    .music-toggle .pause {
-        display: none;
-    }
-    
-    .music-toggle.playing .play {
-        display: none;
-    }
-    
-    .music-toggle.playing .pause {
-        display: block;
-    }
-    
-    .music-info {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .song-title {
-        font-weight: 600;
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 2px;
-    }
-    
-    .song-artist {
-        font-size: 12px;
-        color: #888;
-    }
-    
-    .music-controls {
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-    }
-    
-    .volume-control {
-        width: 60px;
-        margin: 0 10px;
-    }
-    
-    .volume-control input[type="range"] {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background: #f0f0f0;
-        outline: none;
-        opacity: 0.7;
-        transition: opacity 0.2s;
-    }
-    
-    .volume-control input[type="range"]:hover {
-        opacity: 1;
-    }
-    
-    .volume-control input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #d87093;
-        cursor: pointer;
-    }
-    
-    .volume-control input[type="range"]::-moz-range-thumb {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #d87093;
-        cursor: pointer;
-    }
-    
-    .volume-icon {
-        color: #888;
-        font-size: 14px;
-    }
-    /* Mobil için düzenlemeler */
-    @media (max-width: 768px) {
-        .music-player-container {
-            bottom: 20px;
-            right: 20px;
-        }
-        
-        .music-controls {
-            margin-left: 5px;
-        }
-        
-        .volume-control {
-            width: 40px;
-            margin: 0 5px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .music-player {
-            padding: 8px 12px;
-        }
-        
-        .music-toggle {
-            width: 36px;
-            height: 36px;
-            margin-right: 8px;
-        }
-        
-        .song-title {
-            font-size: 12px;
-        }
-        
-        .song-artist {
-            font-size: 10px;
-        }
-    }
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-index: 1000;
+            }
+            
+            .music-player {
+                display: flex;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 10px 15px;
+                border-radius: 50px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                border: 1px solid rgba(216, 112, 147, 0.2);
+            }
+            
+            .music-player:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .music-toggle {
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f9f2f4;
+                color: #d87093;
+                font-size: 18px;
+                transition: all 0.3s;
+                position: relative;
+                margin-right: 12px;
+            }
+            
+            .music-toggle:hover {
+                background-color: #d87093;
+                color: #fff;
+                transform: scale(1.05);
+            }
+            
+            .music-toggle .play {
+                display: block;
+            }
+            
+            .music-toggle .pause {
+                display: none;
+            }
+            
+            .music-toggle.playing .play {
+                display: none;
+            }
+            
+            .music-toggle.playing .pause {
+                display: block;
+            }
+            
+            .music-info {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .song-title {
+                font-weight: 600;
+                font-size: 14px;
+                color: #555;
+                margin-bottom: 2px;
+            }
+            
+            .song-artist {
+                font-size: 12px;
+                color: #888;
+            }
+            
+            .music-controls {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+            }
+            
+            .volume-control {
+                width: 60px;
+                margin: 0 10px;
+            }
+            
+            .volume-control input[type="range"] {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 4px;
+                border-radius: 2px;
+                background: #f0f0f0;
+                outline: none;
+                opacity: 0.7;
+                transition: opacity 0.2s;
+            }
+            
+            .volume-control input[type="range"]:hover {
+                opacity: 1;
+            }
+            
+            .volume-control input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #d87093;
+                cursor: pointer;
+            }
+            
+            .volume-control input[type="range"]::-moz-range-thumb {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #d87093;
+                cursor: pointer;
+            }
+            
+            .volume-icon {
+                color: #888;
+                font-size: 14px;
+            }
+            
+            /* Mobile adjustments */
+            @media (max-width: 768px) {
+                .music-player-container {
+                    bottom: 20px;
+                    right: 20px;
+                }
+                
+                .music-controls {
+                    margin-left: 5px;
+                }
+                
+                .volume-control {
+                    width: 40px;
+                    margin: 0 5px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .music-player {
+                    padding: 8px 12px;
+                }
+                
+                .music-toggle {
+                    width: 36px;
+                    height: 36px;
+                    margin-right: 8px;
+                }
+                
+                .song-title {
+                    font-size: 12px;
+                }
+                
+                .song-artist {
+                    font-size: 10px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -781,19 +792,15 @@
         <header class="slider-container">
             <div class="slider">
                 <div class="slide slide-1">
-    
-                      
                     <div class="slide-content">
                     </div>
                 </div>
                 <div class="slide slide-2">
                     <div class="slide-content">
-    
                     </div>
                 </div>
                 <div class="slide slide-3">
                     <div class="slide-content">
-    
                     </div>
                 </div>
             </div>
@@ -819,7 +826,6 @@
                        We look forward to hearing from you by August 15. We're so grateful for you, and we love you! 💚✨</p>
                   </div>
                   
-                
                 <div class="couple">
                     <div class="person">
                         <div class="profile-img">
@@ -902,7 +908,7 @@
                         </div>
                         <div class="event-time">
                             <span class="event-icon">🕕</span>
-                            6:00 PM Wedding Ceremony Speech
+                            6:00 PM Wedding Talk
                         </div>
                         <div class="event-time">
                             <span class="event-icon">🕡</span>
@@ -929,60 +935,55 @@
                 <div class="rsvp-container">
                     <div class="rsvp-info">
                         <p>Please let us know your attendance by August 15, 2025.</p>
-                        <p>If you have any questions regarding the wedding, feel free to contact us via email or phone.</p>
+                        <p>If you have any questions regarding the wedding, feel free to contact us via phone 😉</p>
                     </div>
                     
-                    <!-- Özel RSVP Formu -->
-
+                    <!-- RSVP Form -->
                     <div class="custom-form-container">
                         <form id="rsvp-form" action="https://formsubmit.co/alifiratcobanoglu@gmail.com" method="POST">
-                            <!-- Katılım durumu -->
+                            <!-- Attendance status -->
                             <div class="form-group">
-                              <label for="attendance">Will you attend? *</label>
+                              <label for="attendance">Will you attend? <span class="required">*</span></label>
                               <select name="attendance" id="attendance" required>
                                 <option value="">Please select</option>
-                                <option value="Evet">Yes</option>
-                                <option value="Hayır">No</option>
-                                <option value="Belki">Maybe</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
                               </select>
                             </div>
                           
-                            <!-- Kişi sayısı -->
-                            <div class="form-group">
-                              <label for="guestCount">How many guests? *</label>
+                            <!-- Guest count -->
+                            <div class="form-group" id="guestCountGroup">
+                              <label for="guestCount">How many guests? <span class="required">*</span></label>
                               <input type="number" name="guestCount" id="guestCount" min="1" required>
                             </div>
                           
-                            <!-- İsimler -->
+                            <!-- Names -->
                             <div class="form-group">
-                              <label for="guestNames">Names *</label>
+                              <label for="guestNames">Names <span class="required">*</span></label>
                               <textarea name="guestNames" id="guestNames" required></textarea>
                             </div>
                           
-                            <!-- Mesaj -->
+                            <!-- Message -->
                             <div class="form-group">
                               <label for="message">Message</label>
                               <textarea name="message" id="message"></textarea>
                             </div>
                           
-                            <!-- Submit butonu -->
-                            <button type="submit" class="submit-btn">Submit</button>
-                            <br>
-<br>
-<br>
-
+                            <!-- FormSubmit.co required hidden fields -->
                             <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="box">
-
-                          </form>
+                            <input type="hidden" name="_subject" value="New Wedding RSVP">
+                            <input type="hidden" name="_template" value="box">
                           
-                          
+                            <!-- Submit button -->
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
                         
                         <div id="form-success" style="display:none;">
                             <div class="success-message">
                                 <div class="success-icon">🌸</div>
                                 <h3>Thank you!</h3>
-                        <p>Your response has been successfully submitted.</p>
+                                <p>Your response has been successfully submitted.</p>
                             </div>
                         </div>
                         
@@ -990,11 +991,10 @@
                             <div class="error-message">
                                 <div class="error-icon">⚠️</div>
                                 <h3>Something went wrong</h3>
-                        <p>Please try again later or contact us directly.</p>
+                                <p>Please try again later or contact us directly.</p>
                             </div>
                         </div>
                     </div>
-                
                 </div>
             </div>
         </section>
@@ -1003,7 +1003,6 @@
         <div class="music-player-container">
             <div class="music-player">
                 <audio id="background-music" preload="auto" loop>
-                    <!-- Aşağıdaki MP3 dosyasını kendi müzik dosyanızın adı ile değiştirin -->
                     <source src="./Disfruto.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
@@ -1028,100 +1027,129 @@
         </div>
         
         <script>
-            // Slider
-            const slider = document.querySelector('.slider');
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            
-            let currentSlide = 0;
-            const maxSlide = slides.length - 1;
-            
-            // Initialize slider
-            function goToSlide(slideIndex) {
-                slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-                currentSlide = slideIndex;
-            }
-            
-            // Next slide
-            nextBtn.addEventListener('click', () => {
-                currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
-                goToSlide(currentSlide);
-            });
-            
-            // Previous slide
-            prevBtn.addEventListener('click', () => {
-                currentSlide = currentSlide === 0 ? maxSlide : currentSlide - 1;
-                goToSlide(currentSlide);
-            });
-            
-            // Auto slide
-            setInterval(() => {
-                currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
-                goToSlide(currentSlide);
-            }, 5000);
-            
-            // Countdown Timer
-            const countdownDate = new Date("September 7, 2025 15:00:00").getTime();
-            
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
+            document.addEventListener('DOMContentLoaded', function() {
+                // Slider functionality
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
                 
-                // Time calculations
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                let currentSlide = 0;
+                const maxSlide = slides.length - 1;
                 
-                // Display results
-                document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-                
-                // If countdown is over
-                if (distance < 0) {
-                    clearInterval(countdownTimer);
-                    document.getElementById("days").innerText = "00";
-                    document.getElementById("hours").innerText = "00";
-                    document.getElementById("minutes").innerText = "00";
-                    document.getElementById("seconds").innerText = "00";
+                // Initialize slider
+                function goToSlide(slideIndex) {
+                    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+                    currentSlide = slideIndex;
                 }
-            }
-            
-            // Update countdown every second
-            updateCountdown();
-            const countdownTimer = setInterval(updateCountdown, 1000);
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
+                
+                // Next slide
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
+                    goToSlide(currentSlide);
+                });
+                
+                // Previous slide
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = currentSlide === 0 ? maxSlide : currentSlide - 1;
+                    goToSlide(currentSlide);
+                });
+                
+                // Auto slide
+                const autoSlideInterval = setInterval(() => {
+                    currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
+                    goToSlide(currentSlide);
+                }, 5000);
+                
+                // Pause and restart auto-sliding when user interacts with slider
+                slider.addEventListener('click', function() {
+                    clearInterval(autoSlideInterval);
                     
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+                    // Restart auto-sliding after 10 seconds
+                    setTimeout(function() {
+                        const newAutoSlideInterval = setInterval(function() {
+                            currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
+                            goToSlide(currentSlide);
+                        }, 5000);
+                    }, 10000);
+                });
+                
+                // Form functionality
+                const attendanceSelect = document.getElementById('attendance');
+                const guestCountInput = document.getElementById('guestCount');
+                const guestCountGroup = document.getElementById('guestCountGroup');
+                
+                // Check guest count when attendance changes
+                attendanceSelect.addEventListener('change', function() {
+                    if (this.value === 'No') {
+                        guestCountInput.value = '0';
+                        guestCountInput.disabled = true;
+                        guestCountInput.required = false;
+                    } else {
+                        guestCountInput.disabled = false;
+                        guestCountInput.required = true;
+                        if (this.value === 'Yes') {
+                            guestCountInput.value = '';
+                        }
+                    }
+                });
+                
+                // Countdown Timer
+                const countdownDate = new Date("September 7, 2025 15:00:00").getTime();
+                
+                function updateCountdown() {
+                    const now = new Date().getTime();
+                    const distance = countdownDate - now;
                     
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
+                    // Time calculations
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    // Display results
+                    document.getElementById("days").innerText = days.toString().padStart(2, '0');
+                    document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+                    document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+                    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+                    
+                    // If countdown is over
+                    if (distance < 0) {
+                        clearInterval(countdownTimer);
+                        document.getElementById("days").innerText = "00";
+                        document.getElementById("hours").innerText = "00";
+                        document.getElementById("minutes").innerText = "00";
+                        document.getElementById("seconds").innerText = "00";
+                    }
+                }
+                
+                // Update countdown every second
+                updateCountdown();
+                const countdownTimer = setInterval(updateCountdown, 1000);
+                
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
                     });
                 });
-            });
-
-            // Music Player
-            document.addEventListener('DOMContentLoaded', function() {
+                
+                // Music control
                 const musicToggle = document.getElementById('music-toggle');
-                const audio = document.getElementById('background-music');
+                const backgroundMusic = document.getElementById('background-music');
                 const volumeSlider = document.getElementById('volume-slider');
                 
-                // Set default volume
-                audio.volume = volumeSlider.value / 100;
-                
-                // Play/pause function
                 musicToggle.addEventListener('click', function() {
-                    if (audio.paused) {
-                        audio.play()
+                    if (backgroundMusic.paused) {
+                        backgroundMusic.play()
                             .then(() => {
                                 musicToggle.classList.add('playing');
                             })
@@ -1130,51 +1158,51 @@
                                 alert('Music file could not be loaded or browser denied permission.');
                             });
                     } else {
-                        audio.pause();
+                        backgroundMusic.pause();
                         musicToggle.classList.remove('playing');
                     }
                 });
                 
-                // Volume control
                 volumeSlider.addEventListener('input', function() {
-                    audio.volume = this.value / 100;
+                    backgroundMusic.volume = this.value / 100;
                 });
                 
-                // Pause music when leaving page
-                window.addEventListener('beforeunload', function() {
-                    audio.pause();
+                // Set initial volume
+                backgroundMusic.volume = volumeSlider.value / 100;
+                
+                // Form submission with AJAX
+                document.getElementById("rsvp-form").addEventListener("submit", function(e) {
+                    e.preventDefault(); // Prevent page refresh
+                    
+                    const form = e.target;
+                    const formData = new FormData(form);
+                    
+                    fetch("https://formsubmit.co/ajax/alifiratcobanoglu@gmail.com", {
+                        method: "POST",
+                        headers: {
+                            'Accept': 'application/json'
+                        },
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            form.reset(); // Reset form
+                            document.getElementById("form-success").style.display = "block";
+                            document.getElementById("form-error").style.display = "none";
+                            window.scrollTo({
+                                top: document.getElementById("form-success").offsetTop - 100,
+                                behavior: "smooth"
+                            });
+                        } else {
+                            throw new Error("Form could not be submitted.");
+                        }
+                    })
+                    .catch(error => {
+                        document.getElementById("form-success").style.display = "none";
+                        document.getElementById("form-error").style.display = "block";
+                    });
                 });
             });
         </script>
-           <script>
-            document.getElementById("rsvp-form").addEventListener("submit", function (e) {
-                e.preventDefault(); // Prevent page refresh
-            
-                const form = e.target;
-                const data = new FormData(form);
-            
-                fetch("https://formsubmit.co/ajax/alifiratcobanoglu@gmail.com", {
-                    method: "POST",
-                    headers: {
-                        'Accept': 'application/json'
-                    },
-                    body: data
-                })
-                .then(response => {
-                    if (response.ok) {
-                        form.reset(); // Reset form
-                        document.getElementById("form-success").style.display = "block";
-                        document.getElementById("form-error").style.display = "none";
-                    } else {
-                        throw new Error("Form could not be submitted.");
-                    }
-                })
-                .catch(error => {
-                    document.getElementById("form-success").style.display = "none";
-                    document.getElementById("form-error").style.display = "block";
-                });
-            });
-            </script>
-             
     </body>
-    </html>
+</html>
