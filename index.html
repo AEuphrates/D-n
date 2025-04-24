@@ -1,52 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wedding Invitation</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
-            
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            
-            body {
-                font-family: 'Lato', sans-serif;
-                color: #555;
-                line-height: 1.6;
-            }
-            
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 0 20px;
-            }
-            
-            /* Header & Slider */
-            .slider-container {
-                position: relative;
-                height: 100vh;
-                overflow: hidden;
-            }
-            
-            .slider {
-                display: flex;
-                height: 100%;
-                transition: transform 0.5s ease-in-out;
-            }
-            
-            .slide {
-                min-width: 100%;
-                height: 100%;
-                background-size: cover;
-                background-position: center;
-                position: relative;
-            }
-            
-            .slide-1 {
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Düğün Davetiyesi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Slider */
+        .slider-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .slider {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .slide-1 {
                 background-image: url(images-3.png);
             }
             
@@ -57,1121 +57,1121 @@
             .slide-3 {
                 background-image: url(images-2.png);
             }
-            
-            .slide-content {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                color: white;
-                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-                width: 100%;
+        
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+        
+        .slide-subtitle {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.5);
+            color: #333;
+            border: none;
+            cursor: pointer;
+            padding: 1rem;
+            font-size: 1.5rem;
+            z-index: 10;
+        }
+        
+        .prev-btn {
+            left: 20px;
+        }
+        
+        .next-btn {
+            right: 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #555;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link:hover {
+            color: #d87093;
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #d87093;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        
+        /* Message Section */
+        .message {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 2;
+        }
+        
+        .message p {
+            margin-bottom: 20px;
+        }
+        
+        /* Couple Section */
+        .couple {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .person {
+            text-align: center;
+            width: 45%;
+            margin-bottom: 40px;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .and {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 10px;    /* Üst boşluğu */
+    margin-bottom: 50px;
+            color: #d87093;
+        }
+        
+        /* Countdown Section */
+        .countdown {
+            background-color: #f9f2f4;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .countdown-title {
+            font-family: 'Playfair Display', serif;
+            color: #888;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .countdown-date {
+            color: #d87093;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Events Section */
+        .events {
+            padding: 80px 0;
+        }
+        
+        .event-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .event-box {
+            background-color: #fff;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .event-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .event-title {
+            font-family: 'Playfair Display', serif;
+            color: #d87093;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .event-date {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .event-time {
+            font-size: 1.3rem;
+            color: #777;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .event-location {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .event-icon {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .event-info {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+        .language-switcher {
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1000;
+background-color: rgba(255, 255, 255, 0.85);
+padding: 8px 12px;
+border-radius: 6px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.language-switcher a {
+color: #555;
+text-decoration: none;
+margin: 0 6px;
+font-weight: 600;
+transition: color 0.3s;
+}
+
+.language-switcher a:hover {
+color: #d87093;
+}
+
+
+        
+        @media (max-width: 768px) {
+            .event-container {
+                flex-direction: column;
             }
             
+            .event-box {
+                width: 100%;
+            }
+            .nav {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    width: 70%;
+    text-align: center;
+}
+
+        }
+        
+        /* RSVP Section */
+        .rsvp {
+            background-color: #fff;
+            padding: 0px 0;
+            text-align: center;
+        }
+        
+        .rsvp-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .rsvp-info {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        /* Custom Form Styling */
+        .custom-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .required {
+            color: #d87093;
+            margin-left: 3px;
+        }
+        
+        .form-group input, 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Lato', sans-serif;
+            transition: all 0.3s;
+            background-color: #f9f9f9;
+        }
+        
+        .form-group input:focus, 
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d87093;
+            box-shadow: 0 0 5px rgba(216, 112, 147, 0.3);
+            background-color: #fff;
+        }
+        
+        .form-group textarea {
+            height: auto;
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-note {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 25px;
+            text-align: left;
+            font-style: italic;
+        }
+        
+        .submit-btn {
+            background-color: #d87093;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn-icon {
+            margin-left: 10px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c25a79;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(216, 112, 147, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Success and Error Messages */
+        .success-message, .error-message {
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .success-message {
+            background-color: #F9F2F4;
+            border: 1px solid #F9F2F4;
+        }
+        
+        .error-message {
+            background-color: #fef0f0;
+            border: 1px solid #fde2e2;
+        }
+        
+        .success-icon, .error-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .success-icon {
+            color: #67c23a;
+            font-size: 2.2rem;
+        }
+        
+        .error-icon {
+            color: #f56c6c;
+        }
+        
+        #form-success h3, #form-error h3 {
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        @media (max-width: 768px) {
+            .custom-form-container {
+                padding: 25px;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #f9f9f9;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .footer-links {
+            margin-top: 10px;
+        }
+        
+        .footer-link {
+            color: #888;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            color: #d87093;
+        }
+        .map-link {
+            color: #d87093;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+font-weight: 500;
+line-height: 1.6;
+text-align: center;
+font-size: 15px;
+}
+
+.map-link:hover {
+color: #1a0dab;
+text-decoration: underline;
+}
+
+        /* Media Queries */
+        @media (max-width: 768px) {
             .slide-title {
-                font-family: 'Playfair Display', serif;
-                font-size: 5rem;
-                margin-bottom: 20px;
-                letter-spacing: 3px;
+                font-size: 3rem;
             }
             
             .slide-subtitle {
-                font-size: 2.5rem;
-                font-weight: 300;
-                letter-spacing: 2px;
-            }
-            
-            .slider-btn {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: rgba(255, 255, 255, 0.5);
-                color: #333;
-                border: none;
-                cursor: pointer;
-                padding: 1rem;
                 font-size: 1.5rem;
-                z-index: 10;
-            }
-            
-            .prev-btn {
-                left: 20px;
-            }
-            
-            .next-btn {
-                right: 20px;
-            }
-            
-            /* Navigation */
-            .nav {
-                position: absolute;
-                bottom: 30px;
-                left: 0;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                gap: 20px;
             }
             
             .nav-link {
-                text-decoration: none;
-                background-color: rgba(255, 255, 255, 0.8);
-                color: #555;
-                padding: 12px 25px;
-                font-size: 1.1rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                transition: all 0.3s;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin: 0 15px;
+                font-size: 1rem;
             }
             
-            .nav-link:hover {
-                color: #d87093;
-                background-color: rgba(255, 255, 255, 0.95);
-                transform: translateY(-3px);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-            
-            /* Sections */
-            section {
-                padding: 80px 0;
-                background-color: #fff;
-            }
-            
-            .section-title {
-                font-family: 'Playfair Display', serif;
-                text-align: center;
-                margin-bottom: 60px;
-                color: #d87093;
-                font-size: 2.5rem;
-                letter-spacing: 2px;
-            }
-            
-            /* Message Section */
-            .message {
-                max-width: 800px;
-                margin: 0 auto;
-                text-align: center;
-                line-height: 2;
-            }
-            
-            .message p {
-                margin-bottom: 20px;
-            }
-            
-            /* Couple Section */
             .couple {
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                margin-top: 50px;
-            }
-            
-            .person {
-                text-align: center;
-                width: 45%;
-                margin-bottom: 40px;
-            }
-            
-            .profile-img {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                overflow: hidden;
-                margin: 0 auto 20px;
-            }
-            
-            .profile-img img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            
-            .and {
-                font-family: 'Playfair Display', serif;
-                text-align: center;
-                font-size: 2rem;
-                margin-top: 10px;    /* Üst boşluğu */
-        margin-bottom: 50px;
-                color: #d87093;
-            }
-            
-            /* Countdown Section */
-            .countdown {
-                background-color: #f9f2f4;
-                text-align: center;
-                padding: 60px 0;
-            }
-            
-            .countdown-title {
-                font-family: 'Playfair Display', serif;
-                color: #888;
-                margin-bottom: 10px;
-                font-size: 2rem;
-            }
-            
-            .countdown-date {
-                color: #d87093;
-                font-family: 'Lato', sans-serif;
-                font-size: 1.5rem;
-                margin-bottom: 40px;
-            }
-            
-            .countdown-container {
-                display: flex;
-                justify-content: center;
-                gap: 40px;
-            }
-            
-            .countdown-item {
-                display: flex;
                 flex-direction: column;
                 align-items: center;
             }
             
-            .countdown-number {
-                font-size: 3rem;
-                font-weight: bold;
-                color: #555;
+            .person {
+                width: 100%;
             }
             
-            .countdown-label {
-                font-size: 1rem;
-                color: #888;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
-            
-            /* Events Section */
-            .events {
-                padding: 80px 0;
-            }
-            
-            .event-container {
-                max-width: 1000px;
-                margin: 0 auto;
-                display: flex;
-                justify-content: space-between;
+            .countdown-container {
                 flex-wrap: wrap;
-                gap: 30px;
+                gap: 20px;
             }
             
-            .event-box {
-                background-color: #fff;
-                padding: 40px;
-                margin-bottom: 30px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-                flex: 1;
-                min-width: 300px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            
-            .event-box:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            }
-            
-            .event-title {
-                font-family: 'Playfair Display', serif;
-                color: #d87093;
+            .countdown-item {
+                width: 45%;
                 margin-bottom: 20px;
-                font-size: 1.8rem;
-                text-align: center;
             }
-            
-            .event-date {
-                font-size: 1.5rem;
-                color: #555;
-                margin-bottom: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .event-time {
-                font-size: 1.3rem;
-                color: #777;
-                margin-bottom: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .event-location {
-                font-size: 1.2rem;
-                color: #666;
-                margin-bottom: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .event-icon {
-                margin-right: 10px;
-                font-size: 1.4rem;
-            }
-            
-            .event-info {
-                margin-top: 10px;
-                font-size: 1.1rem;
-            }
-            .language-switcher {
+        }
+        .music-player-container {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 8px 12px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    
-    .language-switcher a {
-    color: #555;
-    text-decoration: none;
-    margin: 0 6px;
-    font-weight: 600;
-    transition: color 0.3s;
-    }
-    
-    .language-switcher a:hover {
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(216, 112, 147, 0.2);
+}
+
+.music-player:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.music-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f2f4;
     color: #d87093;
-    }
-    
-    
-            
-            @media (max-width: 768px) {
-                .event-container {
-                    flex-direction: column;
-                }
-                
-                .event-box {
-                    width: 100%;
-                }
-                .nav {
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .nav-link {
-        width: 70%;
-        text-align: center;
-    }
-    
-            }
-            
-            /* RSVP Section */
-            .rsvp {
-                background-color: #fff;
-                padding: 0px 0;
-                text-align: center;
-            }
-            
-            .rsvp-container {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            
-            .rsvp-info {
-                margin-bottom: 30px;
-                line-height: 1.8;
-            }
-            
-            /* Custom Form Styling */
-            .custom-form-container {
-                max-width: 800px;
-                margin: 0 auto;
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 40px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            }
-            
-            .form-group {
-                margin-bottom: 25px;
-                text-align: left;
-            }
-            
-            .form-group label {
-                display: block;
-                margin-bottom: 8px;
-                font-weight: 500;
-                color: #555;
-                font-size: 1.1rem;
-                display: flex;
-                align-items: center;
-            }
-            
-            .form-icon {
-                margin-right: 10px;
-                font-size: 1.2rem;
-            }
-            
-            .required {
-                color: #d87093;
-                margin-left: 3px;
-            }
-            
-            .form-group input, 
-            .form-group select,
-            .form-group textarea {
-                width: 100%;
-                padding: 12px 15px;
-                border: 1px solid #ddd;
-                border-radius: 6px;
-                font-size: 1rem;
-                font-family: 'Lato', sans-serif;
-                transition: all 0.3s;
-                background-color: #f9f9f9;
-            }
-            
-            .form-group input:focus, 
-            .form-group select:focus,
-            .form-group textarea:focus {
-                outline: none;
-                border-color: #d87093;
-                box-shadow: 0 0 5px rgba(216, 112, 147, 0.3);
-                background-color: #fff;
-            }
-            
-            .form-group textarea {
-                height: auto;
-                min-height: 100px;
-                resize: vertical;
-            }
-            
-            .form-note {
-                font-size: 0.9rem;
-                color: #888;
-                margin-bottom: 25px;
-                text-align: left;
-                font-style: italic;
-            }
-            
-            .submit-btn {
-                background-color: #d87093;
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                border-radius: 6px;
-                cursor: pointer;
-                font-size: 1.1rem;
-                font-weight: 500;
-                letter-spacing: 1px;
-                transition: all 0.3s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                margin-top: 10px;
-            }
-            
-            .btn-icon {
-                margin-left: 10px;
-            }
-            
-            .submit-btn:hover {
-                background-color: #c25a79;
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(216, 112, 147, 0.3);
-            }
-            
-            .submit-btn:disabled {
-                background-color: #cccccc;
-                cursor: not-allowed;
-                transform: none;
-                box-shadow: none;
-            }
-            
-            /* Success and Error Messages */
-            .success-message, .error-message {
-                padding: 30px;
-                border-radius: 8px;
-                text-align: center;
-                margin: 20px 0;
-            }
-            
-            .success-message {
-                background-color: #F9F2F4;
-                border: 1px solid #F9F2F4;
-            }
-            
-            .error-message {
-                background-color: #fef0f0;
-                border: 1px solid #fde2e2;
-            }
-            
-            .success-icon, .error-icon {
-                font-size: 3rem;
-                margin-bottom: 15px;
-            }
-            
-            .success-icon {
-                color: #67c23a;
-                font-size: 2.2rem;
-            }
-            
-            .error-icon {
-                color: #f56c6c;
-            }
-            
-            #form-success h3, #form-error h3 {
-                margin-bottom: 10px;
-                font-family: 'Playfair Display', serif;
-            }
-            
-            @media (max-width: 768px) {
-                .custom-form-container {
-                    padding: 25px;
-                }
-            }
-            
-            /* Footer */
-            footer {
-                text-align: center;
-                padding: 30px 0;
-                background-color: #f9f9f9;
-                font-size: 0.9rem;
-                color: #888;
-            }
-            
-            .footer-links {
-                margin-top: 10px;
-            }
-            
-            .footer-link {
-                color: #888;
-                margin: 0 10px;
-                text-decoration: none;
-            }
-            
-            .footer-link:hover {
-                color: #d87093;
-            }
-            .map-link {
-                color: #d87093;
-                text-decoration: underline;
-                transition: color 0.3s ease;
-    font-weight: 500;
-    line-height: 1.6;
-    text-align: center;
-    font-size: 15px;
-    }
-    
-    .map-link:hover {
-    color: #1a0dab;
-    text-decoration: underline;
-    }
-    
-            /* Media Queries */
-            @media (max-width: 768px) {
-                .slide-title {
-                    font-size: 3rem;
-                }
-                
-                .slide-subtitle {
-                    font-size: 1.5rem;
-                }
-                
-                .nav-link {
-                    margin: 0 15px;
-                    font-size: 1rem;
-                }
-                
-                .couple {
-                    flex-direction: column;
-                    align-items: center;
-                }
-                
-                .person {
-                    width: 100%;
-                }
-                
-                .countdown-container {
-                    flex-wrap: wrap;
-                    gap: 20px;
-                }
-                
-                .countdown-item {
-                    width: 45%;
-                    margin-bottom: 20px;
-                }
-            }
-            .music-player-container {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 1000;
-    }
-    
-    .music-player {
-        display: flex;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 10px 15px;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        border: 1px solid rgba(216, 112, 147, 0.2);
-    }
-    
-    .music-player:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-    
-    .music-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f9f2f4;
-        color: #d87093;
-        font-size: 18px;
-        transition: all 0.3s;
-        position: relative;
-        margin-right: 12px;
-    }
-    
-    .music-toggle:hover {
-        background-color: #d87093;
-        color: #fff;
-        transform: scale(1.05);
-    }
-    
-    .music-toggle .play {
-        display: block;
-    }
-    
-    .music-toggle .pause {
-        display: none;
-    }
-    
-    .music-toggle.playing .play {
-        display: none;
-    }
-    
-    .music-toggle.playing .pause {
-        display: block;
-    }
-    
-    .music-info {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .song-title {
-        font-weight: 600;
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 2px;
-    }
-    
-    .song-artist {
-        font-size: 12px;
-        color: #888;
+    font-size: 18px;
+    transition: all 0.3s;
+    position: relative;
+    margin-right: 12px;
+}
+
+.music-toggle:hover {
+    background-color: #d87093;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.music-toggle .play {
+    display: block;
+}
+
+.music-toggle .pause {
+    display: none;
+}
+
+.music-toggle.playing .play {
+    display: none;
+}
+
+.music-toggle.playing .pause {
+    display: block;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.song-artist {
+    font-size: 12px;
+    color: #888;
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.volume-control {
+    width: 60px;
+    margin: 0 10px;
+}
+
+.volume-control input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #f0f0f0;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.volume-control input[type="range"]:hover {
+    opacity: 1;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d87093;
+    cursor: pointer;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d87093;
+    cursor: pointer;
+}
+
+.volume-icon {
+    color: #888;
+    font-size: 14px;
+}
+/* Mobil için düzenlemeler */
+@media (max-width: 768px) {
+    .music-player-container {
+        bottom: 20px;
+        right: 20px;
     }
     
     .music-controls {
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     
     .volume-control {
-        width: 60px;
-        margin: 0 10px;
+        width: 40px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .music-player {
+        padding: 8px 12px;
     }
     
-    .volume-control input[type="range"] {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background: #f0f0f0;
-        outline: none;
-        opacity: 0.7;
-        transition: opacity 0.2s;
+    .music-toggle {
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
     }
     
-    .volume-control input[type="range"]:hover {
-        opacity: 1;
+    .song-title {
+        font-size: 12px;
     }
     
-    .volume-control input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #d87093;
-        cursor: pointer;
+    .song-artist {
+        font-size: 10px;
     }
-    
-    .volume-control input[type="range"]::-moz-range-thumb {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #d87093;
-        cursor: pointer;
-    }
-    
-    .volume-icon {
-        color: #888;
-        font-size: 14px;
-    }
-    /* Mobil için düzenlemeler */
-    @media (max-width: 768px) {
-        .music-player-container {
-            bottom: 20px;
-            right: 20px;
-        }
-        
-        .music-controls {
-            margin-left: 5px;
-        }
-        
-        .volume-control {
-            width: 40px;
-            margin: 0 5px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .music-player {
-            padding: 8px 12px;
-        }
-        
-        .music-toggle {
-            width: 36px;
-            height: 36px;
-            margin-right: 8px;
-        }
-        
-        .song-title {
-            font-size: 12px;
-        }
-        
-        .song-artist {
-            font-size: 10px;
-        }
-    }
-        </style>
-    </head>
-    <body>
-        <div class="language-switcher">
-            <a href="index.html">TR</a>
-            <a href="en-index.html">EN</a>
-          </div>
-        <!-- Header and Slider -->
-        <header class="slider-container">
-            <div class="slider">
-                <div class="slide slide-1">
-    
-                      
-                    <div class="slide-content">
-                    </div>
-                </div>
-                <div class="slide slide-2">
-                    <div class="slide-content">
-    
-                    </div>
-                </div>
-                <div class="slide slide-3">
-                    <div class="slide-content">
-    
-                    </div>
-                </div>
-            </div>
-            
-            <button class="slider-btn prev-btn">&#10094;</button>
-            <button class="slider-btn next-btn">&#10095;</button>
-            
-            <nav class="nav">
-                <a href="#message" class="nav-link">Message</a>
-                <a href="#events" class="nav-link">Events</a>
-                <a href="#rsvp" class="nav-link">RSVP</a>
-            </nav>
-        </header>
-        
-        <!-- Message Section -->
-        <section id="message">
-            <div class="container">
-                <h2 class="section-title">Message</h2>
-                <div class="message">
-                    <p>Dear family and lovely friends,</p>
-                    <p>We're filled with excitement and can't wait to celebrate this special day with you! You're invited to our wedding ceremony and the cocktail afterwards; but the cocktail will be a bit more intimate, more of a close-circle gathering. So, when sharing the invitation, we'd appreciate your sweet sensitivity in keeping that in mind 😊</p>
-                    <p>We want you to come, laugh, and celebrate with us! If you could kindly fill out the form below, it would really help us with the preparations. <br>
-                       We look forward to hearing from you by August 15. We're so grateful for you, and we love you! 💚✨</p>
-                  </div>
+}
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <a href="index.html">TR</a>
+        <a href="en-index.html">EN</a>
+      </div>
+    <!-- Header and Slider -->
+    <header class="slider-container">
+        <div class="slider">
+            <div class="slide slide-1">
+
                   
-                
-                <div class="couple">
-                    <div class="person">
-                        <div class="profile-img">
-                            <img src="damat.jpg" alt="Groom">
-                        </div>
-                        <h3>Ali Fırat Çobanoğlu</h3>
-                    </div>
-                    
-                    <div class="and">❤</div>
-                    
-                    <div class="person">
-                        <div class="profile-img">
-                            <img src="gelin.jpg" alt="Bride">
-                        </div>
-                        <h3>Ester İlayda Düz</h3>
-                    </div>
+                <div class="slide-content">
                 </div>
             </div>
-        </section>
-        
-        <!-- Countdown Section -->
-        <section class="countdown">
-            <div class="container">
-                <h2 class="countdown-title">COUNTDOWN</h2>
-                <div class="countdown-date">Until September 7, 2025</div>
-                <div class="countdown-container">
-                    <div class="countdown-item">
-                        <div id="days" class="countdown-number">00</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div id="hours" class="countdown-number">00</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div id="minutes" class="countdown-number">00</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div id="seconds" class="countdown-number">00</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Events Section -->
-        <section id="events" class="events">
-            <div class="container">
-                <h2 class="section-title">Events</h2>
-                <div class="event-container">
-                    <div class="event-box">
-                        <h3 class="event-title">WEDDING CEREMONY</h3>
-                        <div class="event-date">
-                            <span class="event-icon">📅</span>
-                            Sunday, September 7, 2025
-                        </div>
-                        <div class="event-time">
-                            <span class="event-icon">🕒</span>
-                            3:00 PM
-                        </div>
-                        <div class="event-location">
-                            <span class="event-icon">📍</span>
-                            <a href="https://maps.app.goo.gl/rHHKCS9znBXEPNaB9" target="_blank" class="map-link">
-                                Tepebaşı Municipality Wedding Hall<br>
-                                Hoşnudiye, Şahin St. No:82/D, 26130 Tepebaşı/Eskişehir
-                            </a>
-                          </div>
-                    </div>
-                    
-                    <div class="event-box">
-                        <h3 class="event-title">COCKTAIL</h3>
-                        <div class="event-date">
-                            <span class="event-icon">📅</span>
-                            Sunday, September 7, 2025
-                        </div>
-                        <div class="event-time">
-                            <span class="event-icon">🕠</span>
-                            5:30 PM Start
-                        </div>
-                        <div class="event-time">
-                            <span class="event-icon">🕕</span>
-                            6:00 PM Wedding Ceremony Speech
-                        </div>
-                        <div class="event-time">
-                            <span class="event-icon">🕡</span>
-                            6:30 PM Cocktail
-                        </div>
-                        
-                        <div class="event-location">
-                            <span class="event-icon">🍸</span>
-                            <a href="https://maps.app.goo.gl/fjJkQUaZ5Jgn13hy5" target="_blank" class="map-link">
-                                Sarar Boutique Hotel<br>
-                                Sümer Neighborhood, Basın Şehitleri Avenue No:341/G,<br>
-                                Inside Sarar Basma Factory, 26140
-                            </a>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- RSVP Section -->
-        <section id="rsvp" class="rsvp">
-            <div class="container">
-                <h2 class="section-title">RSVP</h2>
-                <div class="rsvp-container">
-                    <div class="rsvp-info">
-                        <p>Please let us know your attendance by August 15, 2025.</p>
-                        <p>If you have any questions regarding the wedding, feel free to contact us via email or phone.</p>
-                    </div>
-                    
-                    <!-- Özel RSVP Formu -->
+            <div class="slide slide-2">
+                <div class="slide-content">
 
-                    <div class="custom-form-container">
-                        <form id="rsvp-form" action="https://formsubmit.co/alifiratcobanoglu@gmail.com" method="POST">
-                            <!-- Katılım durumu -->
-                            <div class="form-group">
-                              <label for="attendance">Will you attend? *</label>
-                              <select name="attendance" id="attendance" required>
-                                <option value="">Please select</option>
-                                <option value="Evet">Yes</option>
-                                <option value="Hayır">No</option>
-                                <option value="Belki">Maybe</option>
-                              </select>
-                            </div>
-                          
-                            <!-- Kişi sayısı -->
-                            <div class="form-group">
-                              <label for="guestCount">How many guests? *</label>
-                              <input type="number" name="guestCount" id="guestCount" min="1" required>
-                            </div>
-                          
-                            <!-- İsimler -->
-                            <div class="form-group">
-                              <label for="guestNames">Names *</label>
-                              <textarea name="guestNames" id="guestNames" required></textarea>
-                            </div>
-                          
-                            <!-- Mesaj -->
-                            <div class="form-group">
-                              <label for="message">Message</label>
-                              <textarea name="message" id="message"></textarea>
-                            </div>
-                          
-                            <!-- Submit butonu -->
-                            <button type="submit" class="submit-btn">Submit</button>
-
-                            <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="box">
-
-                          </form>
-                          
-                          
-                        
-                        <div id="form-success" style="display:none;">
-                            <div class="success-message">
-                                <div class="success-icon">🌸</div>
-                                <h3>Thank you!</h3>
-                        <p>Your response has been successfully submitted.</p>
-                            </div>
-                        </div>
-                        
-                        <div id="form-error" style="display:none;">
-                            <div class="error-message">
-                                <div class="error-icon">⚠️</div>
-                                <h3>Something went wrong</h3>
-                        <p>Please try again later or contact us directly.</p>
-                            </div>
-                        </div>
-                    </div>
-                
                 </div>
             </div>
-        </section>
-        
-        <!-- Music Player -->
-        <div class="music-player-container">
-            <div class="music-player">
-                <audio id="background-music" preload="auto" loop>
-                    <!-- Aşağıdaki MP3 dosyasını kendi müzik dosyanızın adı ile değiştirin -->
-                    <source src="./Disfruto.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <button class="music-toggle" id="music-toggle">
-                    <span class="play">▶</span>
-                    <span class="pause">❚❚</span>
-                </button>
-                
-                <div class="music-info">
-                    <div class="song-title">Our Song</div>
-                    <div class="song-artist">Disfruto</div>
-                </div>
-                
-                <div class="music-controls">
-                    <span class="volume-icon">🔈</span>
-                    <div class="volume-control">
-                        <input type="range" id="volume-slider" min="0" max="100" value="70">
-                    </div>
+            <div class="slide slide-3">
+                <div class="slide-content">
+
                 </div>
             </div>
         </div>
         
-        <script>
-            // Slider
-            const slider = document.querySelector('.slider');
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            
-            let currentSlide = 0;
-            const maxSlide = slides.length - 1;
-            
-            // Initialize slider
-            function goToSlide(slideIndex) {
-                slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-                currentSlide = slideIndex;
-            }
-            
-            // Next slide
-            nextBtn.addEventListener('click', () => {
-                currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
-                goToSlide(currentSlide);
-            });
-            
-            // Previous slide
-            prevBtn.addEventListener('click', () => {
-                currentSlide = currentSlide === 0 ? maxSlide : currentSlide - 1;
-                goToSlide(currentSlide);
-            });
-            
-            // Auto slide
-            setInterval(() => {
-                currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
-                goToSlide(currentSlide);
-            }, 5000);
-            
-            // Countdown Timer
-            const countdownDate = new Date("September 7, 2025 15:00:00").getTime();
-            
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-                
-                // Time calculations
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                // Display results
-                document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-                
-                // If countdown is over
-                if (distance < 0) {
-                    clearInterval(countdownTimer);
-                    document.getElementById("days").innerText = "00";
-                    document.getElementById("hours").innerText = "00";
-                    document.getElementById("minutes").innerText = "00";
-                    document.getElementById("seconds").innerText = "00";
-                }
-            }
-            
-            // Update countdown every second
-            updateCountdown();
-            const countdownTimer = setInterval(updateCountdown, 1000);
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                });
-            });
+        <button class="slider-btn prev-btn">&#10094;</button>
+        <button class="slider-btn next-btn">&#10095;</button>
+        
+        <nav class="nav">
+            <a href="#message" class="nav-link">Mesaj</a>
+            <a href="#events" class="nav-link">Organizasyon</a>
+            <a href="#rsvp" class="nav-link">Katılım</a>
+        </nav>
+    </header>
+    
+    <!-- Message Section -->
+    <section id="message">
+        <div class="container">
+            <h2 class="section-title">Mesaj</h2>
+            <div class="message">
+                <p>Sevgili ailemiz, güzel dostlarımız,</p>
+                <p>Çok güzel bir heyecan içindeyiz ve bu özel günü sizinle kutlamak için sabırsızlanıyoruz! Nikahımıza ve sonrasındaki kokteyle davetlisiniz; ama kokteyl biraz daha samimi, biraz daha biz bize olacak. O yüzden, davetiyeyi paylaşırken bunu aklınızda tutup tatlı bir hassasiyet gösterirseniz çok seviniriz 😊 </p>
+                <p>Gelin, gülün, bizimle eğlenin istiyoruz! Aşağıdaki formu doldurursanız, hazırlıklarımızı daha rahat yapabiliriz. <br>
+                    15 Ağustos’a kadar haberlerinizi bekliyoruz. İyi ki varsınız, sizi seviyoruz! 💚✨</p>
+              </div>
+              
+              
 
-            // Music Player
-            document.addEventListener('DOMContentLoaded', function() {
-                const musicToggle = document.getElementById('music-toggle');
-                const audio = document.getElementById('background-music');
-                const volumeSlider = document.getElementById('volume-slider');
+            
+            <div class="couple">
+                <div class="person">
+                    <div class="profile-img">
+                        <img src="damat.jpg" alt="Damat">
+                    </div>
+                    <h3>Ali Fırat Çobanoğlu</h3>
+                </div>
                 
-                // Set default volume
-                audio.volume = volumeSlider.value / 100;
+                <div class="and">❤</div>
                 
-                // Play/pause function
-                musicToggle.addEventListener('click', function() {
-                    if (audio.paused) {
-                        audio.play()
-                            .then(() => {
-                                musicToggle.classList.add('playing');
-                            })
-                            .catch(error => {
-                                console.error('Could not play music:', error);
-                                alert('Music file could not be loaded or browser denied permission.');
-                            });
-                    } else {
-                        audio.pause();
-                        musicToggle.classList.remove('playing');
-                    }
-                });
+                <div class="person">
+                    <div class="profile-img">
+                        <img src="gelin.jpg" alt="Gelin">
+                    </div>
+                    <h3>Ester İlayda Düz</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Countdown Section -->
+    <section class="countdown">
+        <div class="container">
+            <h2 class="countdown-title">GERİ SAYIM</h2>
+            <div class="countdown-date">7 Eylül 2025'e</div>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <div id="days" class="countdown-number">00</div>
+                    <div class="countdown-label">Gün</div>
+                </div>
+                <div class="countdown-item">
+                    <div id="hours" class="countdown-number">00</div>
+                    <div class="countdown-label">Saat</div>
+                </div>
+                <div class="countdown-item">
+                    <div id="minutes" class="countdown-number">00</div>
+                    <div class="countdown-label">Dakika</div>
+                </div>
+                <div class="countdown-item">
+                    <div id="seconds" class="countdown-number">00</div>
+                    <div class="countdown-label">Saniye</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title">Organizasyon</h2>
+            <div class="event-container">
+                <div class="event-box">
+                    <h3 class="event-title">NİKAH TÖRENİ</h3>
+                    <div class="event-date">
+                        <span class="event-icon">📅</span>
+                        7 Eylül 2025, Pazar
+                    </div>
+                    <div class="event-time">
+                        <span class="event-icon">🕒</span>
+                        15:00
+                    </div>
+                    <div class="event-location">
+                        <span class="event-icon">📍</span>
+                        <a href="https://maps.app.goo.gl/rHHKCS9znBXEPNaB9" target="_blank" class="map-link">
+                          Tepebaşı Belediyesi Nikah Salonu<br>
+                          Hoşnudiye, Şahin Cd. <br> No:82/D, 26130
+                        </a>
+                      </div>
+                </div>
                 
-                // Volume control
-                volumeSlider.addEventListener('input', function() {
-                    audio.volume = this.value / 100;
-                });
+                <div class="event-box">
+                    <h3 class="event-title">KOKTEYL</h3>
+                    <div class="event-date">
+                        <span class="event-icon">📅</span>
+                        7 Eylül 2025, Pazar
+                    </div>
+                    <div class="event-time">
+                        <span class="event-icon">🕠</span>
+                        17:30 Başlangıç
+                    </div>
+                    <div class="event-time">
+                        <span class="event-icon">🕕</span>
+                        18:00 Nikah Konuşması
+                    </div>
+                    <div class="event-time">
+                        <span class="event-icon">🕡</span>
+                        18:30 Kokteyl
+                    </div>
+                    <div class="event-location">
+                        <span class="event-icon">🍸</span>
+                        <a href="https://maps.app.goo.gl/fjJkQUaZ5Jgn13hy5" target="_blank" class="map-link">
+                          Sarar Butik Hotel<br>
+                          Sümer Mah. Basın Şehitleri Cad. <br> No:341/G, 26140 <br>
+                          Sarar Basma Fabrikası içi
+                        </a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <h2 class="section-title">Katılım</h2>
+            <div class="rsvp-container">
+                <div class="rsvp-info">
+                    <p>Lütfen 15 Ağustos 2025 tarihine kadar katılım durumunuzu bildiriniz.</p>
+                    <p>Düğünümüzle ilgili sorularınız için telefon ile ulaşabilirsiniz 😉</p>
+                </div>
                 
-                // Pause music when leaving page
-                window.addEventListener('beforeunload', function() {
+                <!-- Özel RSVP Formu -->
+
+                <div class="custom-form-container">
+                    <form id="rsvp-form" action="https://formsubmit.co/alifiratcobanoglu@gmail.com" method="POST">
+                        <!-- Katılım durumu -->
+                        <div class="form-group">
+                          <label for="attendance">Katılacak mısınız? *</label>
+                          <select name="attendance" id="attendance" required>
+                            <option value="">Lütfen seçin</option>
+                            <option value="Evet">Evet</option>
+                            <option value="Hayır">Hayır</option>
+                            <option value="Belki">Belki</option>
+                          </select>
+                        </div>
+                      
+                        <!-- Kişi sayısı -->
+                        <div class="form-group">
+                          <label for="guestCount">Kaç kişi katılacaksınız? *</label>
+                          <input type="number" name="guestCount" id="guestCount" min="1" required>
+                        </div>
+                      
+                        <!-- İsimler -->
+                        <div class="form-group">
+                          <label for="guestNames">İsimler *</label>
+                          <textarea name="guestNames" id="guestNames" required></textarea>
+                        </div>
+                      
+                        <!-- Mesaj -->
+                        <div class="form-group">
+                          <label for="message">Mesaj</label>
+                          <textarea name="message" id="message"></textarea>
+                        </div>
+                      
+                        <!-- Submit butonu -->
+                        <button type="submit" class="submit-btn">Gönder</button>
+
+                        <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="box">
+
+                      </form>
+                      
+                      
+                    
+                    <div id="form-success" style="display:none;">
+                        <div class="success-message">
+                            <div class="success-icon">🌸</div>
+                            <h3>Teşekkürler!</h3>
+                            <p>Katılım bilginiz bize ulaştı.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="form-error" style="display:none;">
+                        <div class="error-message">
+                            <div class="error-icon">⚠️</div>
+                            <h3>Bir hata oluştu</h3>
+                            <p>Lütfen daha sonra tekrar deneyiniz veya bizimle iletişime geçiniz.</p>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <div class="music-player-container">
+        <div class="music-player">
+            <audio id="background-music" preload="auto" loop>
+                <!-- Aşağıdaki MP3 dosyasını kendi müzik dosyanızın adı ile değiştirin -->
+                <source src="./Disfruto.mp3" type="audio/mpeg">
+                Tarayıcınız audio elementini desteklemiyor.
+            </audio>
+            
+            <button class="music-toggle" id="music-toggle">
+                <span class="play">▶</span>
+                <span class="pause">❚❚</span>
+            </button>
+            
+            <div class="music-info">
+                <div class="song-title">Bizim Şarkımız</div>
+                <div class="song-artist">Disfruto   </div>
+            </div>
+            
+            <div class="music-controls">
+                <span class="volume-icon">🔈</span>
+                <div class="volume-control">
+                    <input type="range" id="volume-slider" min="0" max="100" value="70">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const musicToggle = document.getElementById('music-toggle');
+            const audio = document.getElementById('background-music');
+            const volumeSlider = document.getElementById('volume-slider');
+            
+            // Varsayılan ses seviyesini ayarla
+            audio.volume = volumeSlider.value / 100;
+            
+            // Müzik çalma/durdurma işlevi
+            musicToggle.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play()
+                        .then(() => {
+                            musicToggle.classList.add('playing');
+                        })
+                        .catch(error => {
+                            console.error('Müzik çalınamadı:', error);
+                            alert('Müzik dosyası yüklenemedi veya tarayıcı izin vermedi.');
+                        });
+                } else {
                     audio.pause();
+                    musicToggle.classList.remove('playing');
+                }
+            });
+            
+            // Ses seviyesi kontrolü
+            volumeSlider.addEventListener('input', function() {
+                audio.volume = this.value / 100;
+            });
+            
+            // Sayfadan ayrılma durumunda müziği durdur
+            window.addEventListener('beforeunload', function() {
+                audio.pause();
+            });
+        });
+    </script>
+    <script>
+        // Slider
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        
+        let currentSlide = 0;
+        const maxSlide = slides.length - 1;
+        
+        // Initialize slider
+        function goToSlide(slideIndex) {
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+            currentSlide = slideIndex;
+        }
+        
+        // Next slide
+        nextBtn.addEventListener('click', () => {
+            currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
+            goToSlide(currentSlide);
+        });
+        
+        // Previous slide
+        prevBtn.addEventListener('click', () => {
+            currentSlide = currentSlide === 0 ? maxSlide : currentSlide - 1;
+            goToSlide(currentSlide);
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
+            goToSlide(currentSlide);
+        }, 5000);
+        
+        // Countdown Timer
+        const countdownDate = new Date("September 7, 2025 15:00:00").getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display results
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            
+            // If countdown is over
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+            }
+        }
+        
+        // Update countdown every second
+        updateCountdown();
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
                 });
             });
+        });
+
+        
+    </script>
+       <script>
+        document.getElementById("rsvp-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Sayfa yenilenmesini engelle
+        
+            const form = e.target;
+            const data = new FormData(form);
+        
+            fetch("https://formsubmit.co/ajax/alifiratcobanoglu@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: data
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.reset(); // Formu sıfırla
+                    document.getElementById("form-success").style.display = "block";
+                    document.getElementById("form-error").style.display = "none";
+                } else {
+                    throw new Error("Form gönderilemedi.");
+                }
+            })
+            .catch(error => {
+                document.getElementById("form-success").style.display = "none";
+                document.getElementById("form-error").style.display = "block";
+            });
+        });
         </script>
-           <script>
-            document.getElementById("rsvp-form").addEventListener("submit", function (e) {
-                e.preventDefault(); // Prevent page refresh
-            
-                const form = e.target;
-                const data = new FormData(form);
-            
-                fetch("https://formsubmit.co/ajax/alifiratcobanoglu@gmail.com", {
-                    method: "POST",
-                    headers: {
-                        'Accept': 'application/json'
-                    },
-                    body: data
-                })
-                .then(response => {
-                    if (response.ok) {
-                        form.reset(); // Reset form
-                        document.getElementById("form-success").style.display = "block";
-                        document.getElementById("form-error").style.display = "none";
-                    } else {
-                        throw new Error("Form could not be submitted.");
-                    }
-                })
-                .catch(error => {
-                    document.getElementById("form-success").style.display = "none";
-                    document.getElementById("form-error").style.display = "block";
-                });
-            });
-            </script>
-             
-    </body>
-    </html>
+         
+</body>
+</html>
