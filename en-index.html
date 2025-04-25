@@ -880,8 +880,8 @@
                     <div class="event-box">
                         <h3 class="event-title">WEDDING CEREMONY</h3>
                         <div class="event-date">
-                            <span class="event-icon">📅</span>
-                            Sunday, September 7, 2025
+                            <span class="event-icon">🗓️</span>
+                           <div style="font-size:20px">Sunday, September 7, 2025</div> 
                         </div>
                         <div class="event-time">
                             <span class="event-icon">🕒</span>
@@ -891,7 +891,7 @@
                             <span class="event-icon">📍</span>
                             <a href="https://maps.app.goo.gl/rHHKCS9znBXEPNaB9" target="_blank" class="map-link">
                                 Tepebaşı Municipality Wedding Hall<br>
-                                Hoşnudiye, Şahin St. No:82/D, 26130 Tepebaşı/Eskişehir
+                                Hoşnudiye, Şahin St.<br> No:82/D, 26130
                             </a>
                           </div>
                     </div>
@@ -899,8 +899,8 @@
                     <div class="event-box">
                         <h3 class="event-title">COCKTAIL</h3>
                         <div class="event-date">
-                            <span class="event-icon">📅</span>
-                            Sunday, September 7, 2025
+                            <span class="event-icon">🗓️</span>
+                            <div style="font-size:20px">Sunday, September 7, 2025</div> 
                         </div>
                         <div class="event-time">
                             <span class="event-icon">🕠</span>
@@ -919,8 +919,8 @@
                             <span class="event-icon">🍸</span>
                             <a href="https://maps.app.goo.gl/fjJkQUaZ5Jgn13hy5" target="_blank" class="map-link">
                                 Sarar Boutique Hotel<br>
-                                Sümer Neighborhood, Basın Şehitleri Avenue No:341/G,<br>
-                                Inside Sarar Basma Factory, 26140
+                                Sümer Neighborhood, Basın Şehitleri Avenue<br>No:341/G, 26140 <br>
+                                Inside Sarar Basma Factory
                             </a>
                           </div>
                     </div>
@@ -978,9 +978,10 @@
                             <!-- Submit button -->
                             <button type="submit" class="submit-btn">Submit</button>
                         </form>
-                                            <br>
-                    <br>
-                    <br>
+                        <br>
+                        <br>
+                        <br>
+                        
                         <div id="form-success" style="display:none;">
                             <div class="success-message">
                                 <div class="success-icon">🌸</div>
@@ -1144,7 +1145,7 @@
                     });
                 });
                 
-                // Music control
+                // Music control - FIXED VERSION
                 const musicToggle = document.getElementById('music-toggle');
                 const backgroundMusic = document.getElementById('background-music');
                 const volumeSlider = document.getElementById('volume-slider');
@@ -1165,12 +1166,20 @@
                     }
                 });
                 
+                // Volume control - fixed
+                volumeSlider.addEventListener('change', function() {
+                    backgroundMusic.volume = this.value / 100;
+                });
+                
+                // Also listen for input event for real-time volume changes
                 volumeSlider.addEventListener('input', function() {
                     backgroundMusic.volume = this.value / 100;
+                    console.log("Volume changed to:", this.value / 100);
                 });
                 
                 // Set initial volume
                 backgroundMusic.volume = volumeSlider.value / 100;
+                console.log("Initial volume set to:", backgroundMusic.volume);
                 
                 // Form submission with AJAX
                 document.getElementById("rsvp-form").addEventListener("submit", function(e) {
