@@ -878,7 +878,7 @@
                 <div class="event-box">
                     <h3 class="event-title">NİKAH TÖRENİ</h3>
                     <div class="event-date">
-                        <span class="event-icon">📅</span>
+                        <span class="event-icon">🗓️</span>
                         7 Eylül 2025, Pazar
                     </div>
                     <div class="event-time">
@@ -897,7 +897,7 @@
                 <div class="event-box">
                     <h3 class="event-title">KOKTEYL</h3>
                     <div class="event-date">
-                        <span class="event-icon">📅</span>
+                        <span class="event-icon">🗓️</span>
                         7 Eylül 2025, Pazar
                     </div>
                     <div class="event-time">
@@ -978,6 +978,7 @@
                     <br>
                     <br>
                     <br>
+                    
                     <div id="form-success" style="display:none;">
                         <div class="success-message">
                             <div class="success-icon">🌸</div>
@@ -1142,7 +1143,7 @@
                 });
             });
             
-            // Müzik kontrolü
+            // Müzik kontrolü - DÜZELTİLMİŞ
             const musicToggle = document.getElementById('music-toggle');
             const backgroundMusic = document.getElementById('background-music');
             const volumeSlider = document.getElementById('volume-slider');
@@ -1163,12 +1164,20 @@
                 }
             });
             
+            // Ses seviyesi kontrolü - düzeltilmiş
+            volumeSlider.addEventListener('change', function() {
+                backgroundMusic.volume = this.value / 100;
+            });
+            
+            // Anlık ses değişimi için input olayını da dinle
             volumeSlider.addEventListener('input', function() {
                 backgroundMusic.volume = this.value / 100;
+                console.log("Ses seviyesi değişti:", this.value / 100);
             });
             
             // Başlangıçta ses seviyesini ayarla
             backgroundMusic.volume = volumeSlider.value / 100;
+            console.log("Başlangıç ses seviyesi:", backgroundMusic.volume);
             
             // Form gönderimi AJAX ile
             document.getElementById("rsvp-form").addEventListener("submit", function(e) {
@@ -1190,12 +1199,10 @@
                         document.getElementById("form-success").style.display = "block";
                         document.getElementById("form-error").style.display = "none";
                         window.scrollTo({
-            top: document.getElementById("form-success").offsetTop - 100,
-            behavior: "smooth"
-        });
-                    } 
-                    
-                    else {
+                            top: document.getElementById("form-success").offsetTop - 100,
+                            behavior: "smooth"
+                        });
+                    } else {
                         throw new Error("Form gönderilemedi.");
                     }
                 })
@@ -1205,7 +1212,6 @@
                 });
             });
         });
-
     </script>
 </body>
 </html>
